@@ -1,0 +1,80 @@
+﻿@model matrimonialProject.ViewModels.SearchViewModel
+@using matrimonialProject.Helper
+@{
+    ViewData["Title"] = "SearchCategory";
+}
+
+<form method="post">
+    <div class="form-control">
+        <select asp-for="Selected" id="searchlist"asp-items="@Html.GetEnumSelectList<SearchCategory>()">
+            <option value="-1">Select</option>
+        </select>
+        <input type="submit" value="Search" id="Submit" placeholder="Search" />
+    </div>
+
+    <div class="form-control">
+        <div id="TextBoxContainer">
+            
+        </div>
+
+
+    </div>
+    @if(ViewBag.showResults==true)
+    {
+        <div id="divResults" class="form-row">
+            <partial name="_getUserData" model="Model.Users"/>
+
+        </div>
+    }
+
+</form>
+
+@section scripts
+{
+<script type="text/javascript">
+    $(function () {
+        $("#searchList").change(function () {
+
+            if ("#searchList").val() == 0{
+                $("#TextBoxContainer").empty();
+                var div = $("<div />");
+                var value = "";
+                var from = "Minimun Age";
+                var to = "Maximun Age";
+
+                var minTextBox = $("<input />").attr("type", "textbox").attr("name", "Min");
+                var maxTextBox = $("<input />").attr("type", "textbox").attr("name", "Max");
+                minTextBox.val(value);
+                maxTextBox.val(value);
+                div.append(from);
+                div.append(minTextBox);
+                div.append(to);
+                div.append(maxTextBox);
+                $("#TextBoxContainer").append(div)
+            }
+            else if ($("#searchList").val() == 1) {
+                $("#TextBoxContainer").empty();
+                var div = $("<div />");
+                var value = "";
+                var from = "Minimun Salary";
+                var to = "Maximun Salary";
+
+                var minTextBox = $("<input />").attr("type", "textbox").attr("name", "Min");
+                var maxTextBox = $("<input />").attr("type", "textbox").attr("name", "Max");
+                minTextBox.val(value);
+                maxTextBox.val(value);
+                div.append(from);
+                div.append(minTextBox);
+                div.append(to);
+                div.append(maxTextBox);
+                $("#TextBoxContainer").append(div)
+
+
+            }
+)
+        })
+    });
+</script>
+
+}
+

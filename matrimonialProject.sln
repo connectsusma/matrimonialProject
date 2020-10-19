@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "matrimonialProject", "matrimonialProject\matrimonialProject.csproj", "{6710D809-DE40-40B9-AAB9-1D7AB803D8E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6710D809-DE40-40B9-AAB9-1D7AB803D8E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6710D809-DE40-40B9-AAB9-1D7AB803D8E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6710D809-DE40-40B9-AAB9-1D7AB803D8E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6710D809-DE40-40B9-AAB9-1D7AB803D8E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8CA91A5-F84B-492B-BFA0-07ED4CD23BE4}
+	EndGlobalSection
+EndGlobal

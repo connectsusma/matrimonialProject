@@ -1,0 +1,26 @@
+﻿@model IEnumerable<matrimonialProject.ViewModels.UserViewModel>
+
+@{
+    ViewData["Title"] = "IndexAsync";
+}
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-4">
+            <div class="card">
+                <img class="card-img-top" src="@("/uploads/" + item.ImagePath)" alt="card Image">
+                <div class="card-body">
+                    <h4 class="card-title">@item.Name </h4>
+                    <p class="card-text">@item.MaritialStatus</p>
+
+                    <a asp-route-id="@item.Id" asp-action="SendMessage" asp-controller="Home" class="=btn btn-primary">Send Message </a>
+                    <a asp-route-id="@item.Id" asp-action="SelectedUserProfile" asp-controller="Home" class="=btn btn-primary">See Profile </a>
+
+                </div>
+            </div>
+
+        </div>
+    }
+
+</div>

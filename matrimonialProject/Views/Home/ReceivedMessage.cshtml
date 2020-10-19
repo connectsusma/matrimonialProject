@@ -1,0 +1,36 @@
+﻿ @model IEnumerable<matrimonialProject.ViewModels.MessageViewModel>
+@{
+    ViewData["Title"] = "ReceivedMessage";
+}
+
+<h1>ReceivedMessage</h1>
+<table>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Content)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayNameFor(model => model.Content)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(model => model.Name)
+
+                </td>
+            </tr>
+
+        }
+    </tbody>
+    
+</table>
+
